@@ -1,6 +1,7 @@
 <script setup>
 import IMG_COUPON_MIDDLE from '@/assets/coupon_card_middle.svg'
 import IMG_ORDER from '@/assets/empty_order.svg'
+const badStyle = { backgroundImage: `url("${IMG_COUPON_MIDDLE}")` };
 </script>
 
 <template>
@@ -8,7 +9,7 @@ import IMG_ORDER from '@/assets/empty_order.svg'
     <div class="grid-container">
       <div class="grid-item">
         <p>style - backgroundImage - data:image</p>
-        <div class="img-box" :style="{ backgroundImage: `url(${IMG_COUPON_MIDDLE})` }"></div>
+        <div class="img-box" :style="badStyle"></div>
       </div>
       <div class="grid-item">
         <p>style - backgroundImage - SVG</p>
