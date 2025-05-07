@@ -1,47 +1,56 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import IMG_COUPON_MIDDLE from '@/assets/coupon_card_middle.svg'
+import IMG_ORDER from '@/assets/empty_order.svg'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
   <main>
-    <TheWelcome />
+    <div class="grid-container">
+      <div class="grid-item">
+        <p>CSS - backgroundImage - SVG 1</p>
+        <div class="img-box" :style="{ backgroundImage: `url(${IMG_COUPON_MIDDLE})` }"></div>
+      </div>
+      <div class="grid-item">
+        <p>CSS - backgroundImage - SVG 2</p>
+        <div class="img-box" :style="{ backgroundImage: `url(${IMG_ORDER})` }"></div>
+      </div>
+      <div class="grid-item">
+        <p>style - backgroundImage - SVG 1</p>
+        <div class="img-box img-1"></div>
+      </div>
+      <div class="grid-item">
+        <p>style - backgroundImage - SVG 2</p>
+        <div class="img-box img-2"></div>
+      </div>
+    </div>
   </main>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+p {
+  font-size: 20px;
+  font-weight: 600;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+.img-box {
+  width: 300px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+.img-1 {
+  background-image: url("@/assets/coupon_card_middle.svg");
+}
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.img-2 {
+  background-image: url("@/assets/empty_order.svg");
 }
 </style>
