@@ -7,19 +7,19 @@ import IMG_ORDER from '@/assets/empty_order.svg'
   <main>
     <div class="grid-container">
       <div class="grid-item">
-        <p>CSS - backgroundImage - SVG 1</p>
+        <p>style - backgroundImage - data:image</p>
         <div class="img-box" :style="{ backgroundImage: `url(${IMG_COUPON_MIDDLE})` }"></div>
       </div>
       <div class="grid-item">
-        <p>CSS - backgroundImage - SVG 2</p>
+        <p>style - backgroundImage - SVG</p>
         <div class="img-box" :style="{ backgroundImage: `url(${IMG_ORDER})` }"></div>
       </div>
       <div class="grid-item">
-        <p>style - backgroundImage - SVG 1</p>
+        <p>CSS - backgroundImage - data:image</p>
         <div class="img-box img-1"></div>
       </div>
       <div class="grid-item">
-        <p>style - backgroundImage - SVG 2</p>
+        <p>CSS - backgroundImage - SVG</p>
         <div class="img-box img-2"></div>
       </div>
     </div>
@@ -31,7 +31,7 @@ import IMG_ORDER from '@/assets/empty_order.svg'
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 10px;
+  gap: 100px;
 }
 
 p {
